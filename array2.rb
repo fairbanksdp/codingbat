@@ -124,4 +124,20 @@ print match_up([1,2,3],[2,3,5]) #=>3
 print match_up([1,2,3],[2,3,3]) #=>2
 print "\n"
 
+def mod_three?(arr)
+  n = arr.count - 1
+  while n > 1
+    n+=-1
+    if arr[n] % 2 == arr[n-1] % 2 && arr[n] % 2 == arr[n+1] % 2
+      return true
+    end
+  end
+  false
+end
+
+print mod_three?([2,1,3,5]) #=>true
+print mod_three?([2,1,2,5]) #=>false
+print mod_three?([2,4,2,5]) #=>true
+print "\n"
+
 
