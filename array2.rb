@@ -107,4 +107,21 @@ print fizz_array(1) #=>[0]
 print fizz_array(10) #=>[0,1,2,3,4,5,6,7,8,9]
 print "\n"
 
+def match_up(nums1,nums2)
+  n = nums1.length
+  c = 0
+  while n > 0 
+    n+=-1
+    if !(nums1[n] == nums2[n]||nums1[n] > nums2[n] + 2||nums1[n] < nums2[n] - 2)
+      c+=1
+    end
+  end
+  c
+end
+
+print match_up([1,2,3],[2,3,10]) #=>2
+print match_up([1,2,3],[2,3,5]) #=>3
+print match_up([1,2,3],[2,3,3]) #=>2
+print "\n"
+
 
