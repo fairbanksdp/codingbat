@@ -140,4 +140,14 @@ print mod_three?([2,1,2,5]) #=>false
 print mod_three?([2,4,2,5]) #=>true
 print "\n"
 
+def same_ends?(arr,end_check)
+  star_arr = Array.new(end_check){|n| arr[n]}
+  end_arr = Array.new(end_check){|n| arr[arr.length - end_check + n]}
+  star_arr.equal? end_arr
+end
+
+print same_ends?([5,6,45,99,13,5,6],1) #=>false
+print same_ends?([5,6,45,99,13,5,6],2) #=>true
+print same_ends?([5,6,45,99,13,5,6],3) #=>false
+print "\n"
 
